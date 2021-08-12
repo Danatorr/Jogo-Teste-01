@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MovimentoScript.cs" />
+    <Compile Include="Assets\CameraFollowScript.cs" />
+    <Compile Include="Assets\ShootScript.cs" />
+    <Compile Include="Assets\BulletScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
