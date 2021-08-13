@@ -4,33 +4,36 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
-    public Collision collider;
+    private int health;
+    private int healthMax;
 
-    public int health;
-    public int damage = 5;
-
-    void OnCollisionEnter(Collision collision)
+    public HealthScript(int healthMax)
     {
-        if (collision.gameObject.name == "Bullet")
-        {
-            health -= 5;
-
-            if (health <= 0)
-            {
-                Destroy(collision.gameObject);
-            }
-        }
+        this.health = healthMax;
+        health = healthMax;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public int GetHealth()
     {
-        
+        return health;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    public float GetHealthPercent()
     {
-        OnCollisionEnter(collider);
+        return (float)health / healthMax;
+    }
+
+    public void Damage(int damageAmount)
+    {
+        health -= damageAmount;
+
+        if (health < 0) health = 0;
+    }
+
+    public void Heal(int healAmount)
+    {
+        health += healAmount;
+
+        if (health > healthMax) health = healthMax;
     }
 }

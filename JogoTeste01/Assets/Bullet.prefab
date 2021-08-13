@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 1797609101675842539, guid: df3b14034e6e5a341aec1ced87578f82, type: 3}
+  deathEffect: {fileID: 1797609101675842539, guid: df3b14034e6e5a341aec1ced87578f82, type: 3}
 --- !u!82 &5947922399450915765
 AudioSource:
   m_ObjectHideFlags: 0
